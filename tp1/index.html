@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css"> <!-- Se vinvula con el archivo CSS -->
+</head>
+<body>
+<!-- En principio opté por crear un nav donde te puedas dirigir al sitio que cree en el tp anterior y mi perfil de github -->
+        <nav class="nav">
+            <ul class="nav__ul">
+                <li class="nav__li"><a href="">Inicio</a></li>
+                <li class="nav__li"><a href="C:\Users\Leandro\Desktop\sobre mi\tp0\index.html">Lionel Messi</a></li>
+                <!-- El siguiente elemento se dirigirá mediante el "href" a mi perfil de github en otra ventana (gracias al atributo _blank) -->
+                <li class="nav__li"><a href="https://github.com/LeandroPenna1" target="_blank">Mi Git Hub</a></li>
+                
+            </ul>
+        </nav>
+    <h1>Calculadora</h1>
+    <!-- Título y breve descripción -->
+    <p><b>Calculadora realizada por el alumno Leandro Penna para el trabajo práctico 1 (tp1) del trayecto "Programación Web Front-end", del curso Argentina Programa.</b></p>
+    <div class="calcu"> <!-- Mediante la creación de un div con una clase "Calcu", se comienza a crear la calculadora -->
+        <label for="primero"></label>
+        <!-- Se crea un input para que el usuario pueda ingresar su numero. También un label para asociarla con el input y luego mejorar la usabilidad en JS -->
+        <input type="text" id="primero" placeholder="Escribe un número">
+          <select id="operador">
+            <!-- Se crea el menu desplegable (con una primera opcion en blanco por estética), con la finalidad de mostrar las alternativas de operaciones -->
+            <option value="blanco"></option>
+            <option value="suma">Suma</option>
+            <option value="resta">Resta</option>
+            <option value="multiplicar">Multiplicar</option>
+            <option value="dividir">Dividir</option>
+            </select>
+        <input type="text" id="segundo" placeholder="Escribe otro número">
+        <!-- Se crea el segundo input con su pertinente ID, para luego poder utilizarlo en CSS y JS -->
+        <button onclick="resultado()">Calcular</button>
+        <!-- La función resultado, que se podrá ver en profundiad en el archivo JS, se muestra como un botón para realizar la operación y mostrar el resultado -->
+    </div>
+    <br>
+    <!-- Se utilizad la misma clase que el div anterior para que compartan propiedades (centrado, etc) -->
+    <div class="calcu">
+    <button onclick="borrarPrimerCampo()">Borrar Primer Campo</button>
+    <button onclick="borrarSegundoCampo()">Borrar Segundo Campo</button>
+    <!-- Se crean 2 botones que tienen como finalidad borrar enteramente lo que se introduce en alguno de los dos campos -->
+    </div>
+    <br>
+    <p id="resultado"></p> <!-- Se muestra el resultado final -->
+<script src="script.js"></script> <!-- Se vincula el archivo JS -->
+</body>
+</html>

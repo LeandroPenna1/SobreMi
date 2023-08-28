@@ -1,0 +1,72 @@
+/* Se introduce la fuente del sitio */
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Color y posición al título */
+h1 {
+    color: rgb(201, 163, 26);
+    text-align: center;
+    font-size: 100px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/* Se centra los inputs, menu y boton de la calculadora */
+.calcu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Se centra el párrafo */
+p {
+    color: yellow;
+    text-align: center;
+}
+
+/* Se agregan propiedades de color y posicion al nav */
+.nav__ul {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    color: rgb(201, 163, 26);
+    border-style: solid;
+}
+ /* Se introduce espacios */
+.nav__li {
+    display: inline-block;
+    padding: 7px;
+}
+
+/*Se eliminan las decoraciones del texto por default y se agrega un estilo al pasar el cursor por arriba*/
+a:hover {
+    color: black;
+    background-color:rgb(201, 163, 26);
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+a {
+    color: rgb(201, 163, 26);
+    text-decoration: none;
+    font-style: none;
+    background-color: rgb(0, 0, 0);
+}
+/* Se agrega el color de fondo */
+body{
+    background: linear-gradient(to bottom, rgb(54, 54, 58), rgb(0, 0, 0));
+}
+
+/* Para que el body contemple toda la pantalla y el degradado anterior no quede hasta la mitad de la pagina, incorporé este bloque de estilo */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Se le aplican propiedades al resultado final. Tamaño grande, estilo y color. */
+#resultado {
+    font-size: 60px;
+    font-style: oblique;
+    color: rgb(201, 163, 26);
+}
