@@ -1,0 +1,141 @@
+/* A continuación, definiremos la tipografía que se manejará en el sitio y el color
+del fondo y letras*/
+* {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(208, 208, 208);
+    color: rgb(11, 38, 62);
+}
+/* Se modifica el color de las letras y fondo para los títulos. También se centra el texto */
+h2 {
+    color:rgb(8, 8, 79);
+    background: gray;
+    text-align: center;
+}
+/* Estas propiedades logrará que se visualice el nombre del equipo y, a su lado, el escudo apropiado. También se le agrega un espacio a la derecha(padding) para que no queden encimados el texto del escudo */
+.equipos {
+    float: left;
+    padding-right: 10px;
+}
+
+/* Cambiamos el color del nav */
+
+.nav__ul {
+    background-color:rgb(66, 13, 13);
+}
+/* Se cambia el color de cada área del nav, el padding y se introduce un display para que queden alineados uno al lado del otro */
+.nav__li {
+    display: inline-block;
+    padding: 7px;
+    background-color:rgb(115, 10, 10);
+    color: rgb(208, 208, 208);
+}
+/* Mediante hover, se cambia de color al deslizar el mouse por encima de cada área del nav */
+.nav__li:hover {
+    color: yellow;
+}
+/* Se le agrega la propiedad de centrado */
+.pie_pagina {
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    background-color: rgb(115, 10, 10);;
+    color: rgb(208, 208, 208);
+}
+a:hover {
+    color: yellow;
+}
+
+/* MODO OSCURO */
+.modoOscuro {
+    background-color: rgb(37, 34, 34);
+    color: yellow;
+}
+
+.modoOscuro h2 {
+    color: yellow; /* Cambiar el color del título en modo oscuro */
+    background: black; /* Cambiar el fondo del título en modo oscuro */
+}
+
+.modoOscuro main {
+    color: yellow; /* Cambiar el color del título en modo oscuro */
+    background: black; /* Cambiar el fondo del título en modo oscuro */
+}
+
+.modoOscuro .nav__ul {
+    background-color: black; /* Cambiar el fondo del menú en modo oscuro */
+}
+
+.modoOscuro .nav__li {
+    background-color: rgb(25, 25, 25); /* Cambiar el fondo de cada área del menú en modo oscuro */
+    color: white; /* Cambiar el color del texto del menú en modo oscuro */
+}
+
+.modoOscuro a {
+    background-color: rgb(25, 25, 25); /* Cambiar el fondo de los enlaces en modo oscuro */
+    color: white; /* Cambiar el color de los enlaces en modo oscuro */
+}
+
+.modoOscuro a:hover {
+    color: yellow; /* Cambiar el color del texto de los enlaces al pasar el mouse en modo oscuro */
+}
+
+.modoOscuro p {
+    color: yellow; /* Cambiar el color del título en modo oscuro */
+    background: black; /* Cambiar el fondo del título en modo oscuro */
+}
+
+.modoOscuro h1 {
+    color: yellow; /* Cambiar el color del título en modo oscuro */
+    background: black; /* Cambiar el fondo del título en modo oscuro */
+}
+
+.modoOscuro ul {
+    color: yellow; /* Cambiar el color del título en modo oscuro */
+    background: black; /* Cambiar el fondo del título en modo oscuro */
+}
+
+.modoOscuro strong {
+    color: yellow; /* Cambiar el color del título en modo oscuro */
+    background: black; /* Cambiar el fondo del título en modo oscuro */
+}
+
+.modoOscuro li {
+    color: yellow; /* Cambiar el color del título en modo oscuro */
+    background: black; /* Cambiar el fondo del título en modo oscuro */
+}
+
+.modoOscuro img {
+    color: yellow; /* Cambiar el color del título en modo oscuro */
+    background: black; /* Cambiar el fondo del título en modo oscuro */
+}
+
+.modoOscuro iframe {
+    color: yellow; /* Cambiar el color del título en modo oscuro */
+    background: black; /* Cambiar el fondo del título en modo oscuro */
+}
+
+.modoOscuro h5 {
+    color: yellow; /* Cambiar el color del título en modo oscuro */
+    background: black; /* Cambiar el fondo del título en modo oscuro */
+}
+
+.modoOscuro article {
+    color: yellow; /* Cambiar el color del título en modo oscuro */
+    background: black; /* Cambiar el fondo del título en modo oscuro */
+}
+
+.modoOscuro header {
+    color: yellow; /* Cambiar el color del título en modo oscuro */
+    background: black; /* Cambiar el fondo del título en modo oscuro */
+}
+
+.modoOscuro body {
+    color: yellow; /* Cambiar el color del título en modo oscuro */
+    background: black; /* Cambiar el fondo del título en modo oscuro */
+}
+
+.modoOscuro button {
+    color: yellow; /* Cambiar el color del título en modo oscuro */
+    background: black; /* Cambiar el fondo del título en modo oscuro */
+}
