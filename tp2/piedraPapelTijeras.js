@@ -13,7 +13,10 @@ function miFuncion() {
 /////////////////////////////// SELECCION DE OPCIONES Y GANADOR //////////////////////////////////////////
 
 const opciones = ["piedra", "papel", "tijera"];
-
+let victoriasComputadora = 0;
+let victoriasUsuario = 0;
+let intentosComputadora = 0;
+let intentosUsuario = 0;
 function jugar(opcionJugador) {
   const opcionComputadora = opciones[Math.floor(Math.random() * 3)];
   let resultado = "";
@@ -26,11 +29,42 @@ function jugar(opcionJugador) {
     (opcionJugador === "tijera" && opcionComputadora === "papel")
   ) {
     resultado = "¡Ganaste!";
+    victoriasUsuario ++;
   } else {
     resultado = "¡Perdiste!";
+    victoriasComputadora ++;
   }
 
   document.getElementById("resultado").textContent = `Resultado: ${resultado}`;
+  document.getElementById("jugadaComputadora").textContent = `La computadora eligió: ${opcionComputadora}`;
+  document.getElementById("victoriasUsuario").textContent = `Victorias del usuario: ${victoriasUsuario}`;
+  document.getElementById("victoriasComputadora").textContent = `Victorias de la computadora: ${victoriasComputadora}`;
+  if (victoriasUsuario === 3 || victoriasComputadora === 3) {
+    if (victoriasUsuario === 3) {
+      alert("¡Has ganado el juego al mejor de 5!");
+    } else {
+      alert("La computadora ha ganado el juego al mejor de 5.");
+    }
+    intentosUsuario = 0;
+    intentosComputadora = 0;
+    victoriasUsuario = 0;
+    victoriasComputadora = 0;
+}
+}
+
+function reiniciarJuego() {
+  // Reinicia los valores para volver a jugar
+  intentosUsuario = 0;
+  intentosComputadora = 0;
+  victoriasUsuario = 0;
+  victoriasComputadora = 0;
+
+  document.getElementById("marcadorUsuario").textContent = `Victorias Usuario: ${victoriasUsuario}`;
+  document.getElementById("marcadorComputadora").textContent = `Victorias Computadora: ${victoriasComputadora}`;
+  document.getElementById("intentosUsuario").textContent = `Intentos Usuario: ${intentosUsuario}`;
+  document.getElementById("intentosComputadora").textContent = `Intentos Computadora: ${intentosComputadora}`;
+  document.getElementById("resultado").textContent = "Resultado: ";
+  document.getElementById("jugadaComputadora").textContent = "La computadora eligió: ";
 }
 /* Aquí, se detecta con un Event Listener qué opción clickeó (y eligió) el jugador.
 Para ello, cada imagen tenía su respectivo id, por ende se busca por ID qué es lo que eligió.
