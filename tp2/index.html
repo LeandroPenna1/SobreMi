@@ -4,24 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Piedra, Papel o Tijera</title>
-    <link rel="stylesheet" href="style.css"> <!-- Se vinvula con el archivo CSS -->
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
     <h1>Juego Piedra, Papel o Tijera</h1>
-    <form action="" class="nombre">
-        <label for="nombre">Ingresa tu nombre: </label>
-        <input type="text" placeholder="Tu nombre" id="nombre"> 
-        <button type="button" onclick="miFuncion()">Enviar</button>
-    </form>
-        <img src="https://i.pinimg.com/564x/74/73/fd/7473fd10f1cf83ed11e9cab72020bd38.jpg" id="piedra" alt="Piedra">
-        <img src="https://i.pinimg.com/564x/00/70/cb/0070cb1599c4661a71b0e938186fc580.jpg"  id="papel" alt="Papel">
-        <img src="https://i.pinimg.com/564x/be/40/88/be40886a782e216b51d59f7927e0f13f.jpg" id="tijera" alt="Tijera">
-    <div id="jugadaComputadora">
+    <div class="contenedor">
+            <div class="imagenes">
+                <img src="https://images.vexels.com/media/users/3/145640/isolated/preview/a280e39f92cd30cd6181f08b1f4dca6b-tierra-piedra-piedra-roca.png" id="piedra" alt="Piedra">
+            </div>
+            <div class="imagenes">    
+                <img src="https://static.vecteezy.com/system/resources/previews/009/354/743/non_2x/paper-sheet-clipart-design-illustration-free-png.png"  id="papel" alt="Papel">
+            </div>  
+            <div class="imagenes">  
+                <img src="https://static.vecteezy.com/system/resources/previews/019/907/041/non_2x/scissors-graphic-clipart-design-free-png.png" id="tijera" alt="Tijera">
+            </div>
+    </div>  
+        <div class="infoJuego">
+            <form action="" class="nombre">
+            <label for="nombre">Ingresa tu nombre: </label>
+            <input type="text" placeholder="Tu nombre" id="nombre"> 
+            <button type="button" onclick="miFuncion()">Enviar</button>
+            </form>
+        <div id="jugadaComputadora"></div>
+        <div id="resultado"></div>
+        <button onclick="reiniciarJuego()" class="botonReinicio">Reiniciar</button>
+        <div class="conteo">
+        <div id="victoriasUsuario"></div><div id="victoriasComputadora"></div>
+        </div>
     </div>
-    <div id="resultado"></div>
-    <button onclick="reiniciarJuego()">Reiniciar</button>
-    <div id="victoriasUsuario"></div>
-    <div id="victoriasComputadora"></div>
-    <script src="piedraPapelTijeras.js"></script> <!-- Se vincula el archivo JS -->    
+    </div>         
+    <script src="piedraPapelTijeras.js"></script>     
 </body>
 </html>

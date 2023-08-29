@@ -11,13 +11,14 @@ function miFuncion() {
 }
 
 /////////////////////////////// SELECCION DE OPCIONES Y GANADOR //////////////////////////////////////////
-
+//Se definen las opciones para el juego (piedra, papel, tijera)
 const opciones = ["piedra", "papel", "tijera"];
 let victoriasComputadora = 0;
 let victoriasUsuario = 0;
 let intentosComputadora = 0;
 let intentosUsuario = 0;
 function jugar(opcionJugador) {
+  // Se establece la aleatoridad de la jugada de la computadora
   const opcionComputadora = opciones[Math.floor(Math.random() * 3)];
   let resultado = "";
 //Se comparan las opciones para determinar el ganador//
@@ -28,23 +29,27 @@ function jugar(opcionJugador) {
     (opcionJugador === "papel" && opcionComputadora === "piedra") ||
     (opcionJugador === "tijera" && opcionComputadora === "papel")
   ) {
+    //No solo se muestra el resultado "Ganaste", si no también se recuenta la cantidad de veces
     resultado = "¡Ganaste!";
     victoriasUsuario ++;
   } else {
+    //No solo se muestra el resultado "Perdiste", si no también se recuenta la cantidad de veces
     resultado = "¡Perdiste!";
     victoriasComputadora ++;
   }
-
+  // Se actualizan los elementos en el DOM con los resultados
   document.getElementById("resultado").textContent = `Resultado: ${resultado}`;
   document.getElementById("jugadaComputadora").textContent = `La computadora eligió: ${opcionComputadora}`;
   document.getElementById("victoriasUsuario").textContent = `Victorias del usuario: ${victoriasUsuario}`;
   document.getElementById("victoriasComputadora").textContent = `Victorias de la computadora: ${victoriasComputadora}`;
+   // Verificación de si se ha alcanzado la victoria al mejor de 5
   if (victoriasUsuario === 3 || victoriasComputadora === 3) {
     if (victoriasUsuario === 3) {
       alert("¡Has ganado el juego al mejor de 5!");
     } else {
       alert("La computadora ha ganado el juego al mejor de 5.");
     }
+    // Reinicia marcadores y conteo de intentos
     intentosUsuario = 0;
     intentosComputadora = 0;
     victoriasUsuario = 0;
