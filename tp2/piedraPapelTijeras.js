@@ -45,10 +45,11 @@ function jugar(opcionJugador) {
    // Verificación de si se ha alcanzado la victoria al mejor de 5
   if (victoriasUsuario === 3 || victoriasComputadora === 3) {
     if (victoriasUsuario === 3) {
-      alert("¡Has ganado el juego al mejor de 5!");
+      resultadoFinal = "¡Has ganado el juego al mejor de 5!";
     } else {
-      alert("La computadora ha ganado el juego al mejor de 5.");
+      resultadoFinal = "La computadora ha ganado el juego al mejor de 5.";
     }
+  document.getElementById("resultadoFinal").textContent = `Resultado final: ${resultadoFinal}`;
     // Reinicia marcadores y conteo de intentos
     intentosUsuario = 0;
     intentosComputadora = 0;

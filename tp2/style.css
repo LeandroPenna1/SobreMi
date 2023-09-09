@@ -80,6 +80,8 @@ label {
     height: 40vh;   
 }
 
+
+
 #jugadaComputadora {
     color: rgb(0, 0, 0);
     border: 2px solid #000;
@@ -87,6 +89,19 @@ label {
     -webkit-text-stroke: 1px rgb(197, 203, 10);
     font-size: 35px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#resultadoFinal {
+    -webkit-text-stroke: 2.151px rgb(192, 141, 24);
+    color: rgb(236, 19, 19);
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;  
+    top: 570px; 
 }
 
 .conteo {
@@ -106,8 +121,9 @@ label {
 
 .botonReinicio {
     display: flex;
+    flex-direction: column;
     top: 520px;
-    left: 20px;
+    left: 50px;
     position: absolute;
     color: rgb(0, 0, 0);
     transition: background-color 0.3s, box-shadow 0.3s
