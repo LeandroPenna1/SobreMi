@@ -33,9 +33,9 @@ function resultado() {
         }
     }
     /* Se verifica la longitud del resultado y sus consecuencias con alertas */
-    if(resultado > 99999999999999999999) {
+    if(resultado > 9999999 * 9999999) {
         alert("El resultado es demasiado grande");
-    } else if (resultado >= -10 && resultado <= 10){
+    } else if (resultado < 1 / 999999999){
         alert("El resultado es demasiado chico");
     } else{
     /* Se muestra el resultado final */
